@@ -1,3 +1,7 @@
+CREATE DATABASE fit;
+
+use fit;
+
 CREATE TABLE User (
    id INT NOT NULL AUTO_INCREMENT,
    userName VARCHAR(50) NOT NULL,
