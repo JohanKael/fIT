@@ -19,7 +19,7 @@
                 <input type="password" name="userPassword" placeholder="Your Password"><br>
                 <input type="submit" value="Log In" class="valid">
             </form>
-            <a href="<?php echo base_url('login/signin')?>">Sign in</a>
+            
         </div>
     </div>
 
