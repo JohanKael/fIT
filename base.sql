@@ -29,9 +29,8 @@ CREATE TABLE Plat(
     photoPlat VARCHAR(40),
     apportCalorique FLOAT NOT NULL,
     prixPlat FLOAT,
-    idObjectif INT
+    catPlat FLOAT
 );
-ALTER TABLE Plat ADD FOREIGN KEY(idObjectif) REFERENCES Objectif(idObjectif);
 
 CREATE TABLE Regime(
     idRegime INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
