@@ -55,7 +55,7 @@ CREATE TABLE UserWallet(
     idUser INT,
     montant FLOAT
 );
-ALTER TABLE UserWallet ADD FOREIGN KEY(idUser) REFERENCES User(id);
+ALTER TABLE UserWallet ADD FOREIGN KEY(idUser) REFERENCES UserProfile(idUser);
 
 CREATE TABLE MoneyCode(
     idCode INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
