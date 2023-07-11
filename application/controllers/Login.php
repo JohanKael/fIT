@@ -72,13 +72,19 @@ class Login extends CI_Controller {
 	}
 
 	public function home(){
+		$this->load->library('session');
+		$idUser = $this->session->has_userdata('idUser');
+		$objectif = $this->input->post('objectif');
+		echo $idUser;
+		echo $objectif;
+		$this->load->model('Objectifs');
+
+		$this->Objectifs->setObjectif($objectif, $idUser);
+
 		$this->load->view('home_view');
 		$this->load->library('session');
 		$idUser = $this->session->has_userdata('idUser');
 		$objectif = $this->input->post('objectif');
-
-		$this->load->model('Objectifs');
-		$this->Objectifs->setObjectif($idUser, $objectif);
 	}
 	
 
