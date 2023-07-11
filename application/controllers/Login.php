@@ -7,9 +7,12 @@ class Login extends CI_Controller {
 		$this->load->view('login_view');
 	}		
 
-	public function signin(){
+	public function sign(){
 		$this->load->view('sign_view');
+
+		
 	}
+
 }
 
 ?>

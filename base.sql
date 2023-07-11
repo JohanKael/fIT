@@ -4,14 +4,14 @@ use fit;
 
 CREATE TABLE User (
    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   userName VARCHAR(50) NOT NULL,
-   bday DATE,
    userEmail VARCHAR(255) NOT NULL,
    userPassword VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE UserProfil (
    idUser INT,
+   userName VARCHAR(50) NOT NULL,
+   bday DATE,
    userHeight FLOAT NOT NULL,
    userWeight FLOAT NOT NULL,
    userGender VARCHAR(10) NOT NULL

@@ -10,16 +10,18 @@
 
     <div class="contain">
         <div class="imgcontainer">
-
         </div>
         <div class="formulaire">
             <img src="<?php echo base_url('img/logo.png')?>" alt="">
             <form action="" method="POST">
-                <input type="email" name="userEmail" id="" placeholder="Your E-Mail"><br>
-                <input type="password" name="userPassword" placeholder="Your Password"><br>
-                <input type="submit" value="Log In" class="valid">
+                <input type="text" name="userName" id="input" placeholder=" Please enter your name"><br>
+                <input type="date" name="bday" id="input"><br>
+                <input type="number" name="userHeight" id="input" placeholder=" Please enter your height"><br>
+                <input type="number" name="userWeight" id="input" placeholder=" Please enter your weight"><br>
+                <p><input type="radio" name="userGender" id="">Homme</p>
+                <p><input type="radio" name="userGender" id="">Femme</p>
+                <input type="submit" value="Sign in" class="sign">
             </form>
-            
         </div>
     </div>
 
