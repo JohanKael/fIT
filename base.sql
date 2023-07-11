@@ -2,21 +2,21 @@ CREATE DATABASE fit;
 
 use fit;
 
-CREATE TABLE User (
-   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   userEmail VARCHAR(255) NOT NULL,
-   userPassword VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE UserProfil (
-   idUser INT,
+CREATE TABLE UserProfile(
+   idUser INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
    userName VARCHAR(50) NOT NULL,
    bday DATE,
    userHeight FLOAT NOT NULL,
    userWeight FLOAT NOT NULL,
    userGender VARCHAR(10) NOT NULL
 );
-ALTER TABLE UserProfil ADD FOREIGN KEY(idUser) references User(id);
+
+CREATE TABLE User (
+   id INT,
+   userEmail VARCHAR(255) NOT NULL,
+   userPassword VARCHAR(255) NOT NULL
+);
+ALTER TABLE User ADD FOREIGN KEY(id) REFERENCES UserProfile(idUser);
 
 CREATE TABLE Objectif(
     idObjectif INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

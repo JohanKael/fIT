@@ -48,6 +48,9 @@ body{
 .valid{
     background: linear-gradient(to right, #538939, #85C724);
     color: white;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
 }
 
 .sign{
