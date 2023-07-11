@@ -8,15 +8,10 @@ CREATE TABLE UserProfile(
    bday DATE,
    userHeight FLOAT NOT NULL,
    userWeight FLOAT NOT NULL,
-   userGender VARCHAR(10) NOT NULL
-);
-
-CREATE TABLE User (
-   id INT,
+   userGender VARCHAR(10) NOT NULL,
    userEmail VARCHAR(255) NOT NULL,
    userPassword VARCHAR(255) NOT NULL
 );
-ALTER TABLE User ADD FOREIGN KEY(id) REFERENCES UserProfile(idUser);
 
 CREATE TABLE Objectif(
     idObjectif INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

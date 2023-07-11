@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <div class="contain">
+    <div class="contain signin">
         <div class="imgcontainer">
         </div>
         <div class="formulaire">
@@ -18,6 +18,8 @@
                 <input type="date" name="bday" id="input"><br>
                 <input type="number" name="userHeight" id="input" placeholder=" Please enter your height"><br>
                 <input type="number" name="userWeight" id="input" placeholder=" Please enter your weight"><br>
+                <input type="number" name="email" id="input" placeholder=" Please enter your E-mail"><br>
+                <input type="number" name="password" id="input" placeholder=" Please enter your password"><br>
                 <p><input type="radio" name="userGender" value="homme">Homme</p>
                 <p><input type="radio" name="userGender" value="femme">Femme</p>
                 <input type="submit" value="Sign in" class="sign">

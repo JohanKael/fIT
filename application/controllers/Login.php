@@ -20,6 +20,8 @@ class Login extends CI_Controller {
 			$data['userHeight'] = $this->input->post('userHeight');
 			$data['userWeight'] = $this->input->post('userWeight');
 			$data['userGender'] = $this->input->post('userGender');
+			$data['userEmail'] = $this->input->post('email');
+			$data['userPassword'] = $this->input->post('password');
 
 			$userProfil = new UserProfile();
         	$userProfil->save($data);

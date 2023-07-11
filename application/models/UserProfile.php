@@ -38,8 +38,8 @@ class UserProfile extends CI_Model{
     }
 
     public function save($data) {
-        $sql = "INSERT INTO UserProfil (userName, bday, userHeight, userWeight, userGender) VALUES ('%s', '%s', '%s', '%s', '%s')";
-        $sql = sprintf($sql, $data['userName'], $data['bday'], $data['userHeight'], $data['userWeight'], $data['userGender']);
+        $sql = "INSERT INTO UserProfile (userName, bday, userHeight, userWeight, userGender, userEmail, userPassword) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')";
+        $sql = sprintf($sql, $data['userName'], $data['bday'], $data['userHeight'], $data['userWeight'], $data['userGender'], $data['userEmail'], $data['userPassword']);
         $this->db->query($sql);
     }
 

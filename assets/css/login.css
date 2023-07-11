@@ -1,7 +1,6 @@
 body{
     display: flex;
     justify-content: center;
-    padding-top: 5%;
 }
 
 .contain{
@@ -10,6 +9,16 @@ body{
     display: flex;
     box-shadow: 0 0 50px rgb(209, 209, 209);
     border-radius: 20px;
+    margin-top: 5%;
+}
+
+.signin{
+    width: 60%;
+    height: 600px;
+    display: flex;
+    box-shadow: 0 0 50px rgb(209, 209, 209);
+    border-radius: 20px;
+    margin-top: 2%;
 }
 
 .imgcontainer{
