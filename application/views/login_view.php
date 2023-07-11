@@ -14,7 +14,7 @@
         </div>
         <div class="formulaire">
             <img src="<?php echo site_url('img/logo.png')?>" alt="">
-            <form action="" method="POST">
+            <form action="<?php echo base_url('index.php/login/checkLogin')?>" method="POST">
                 <input type="email" name="userEmail" id="input" placeholder="Your E-Mail"><br>
                 <input type="password" id="input" name="userPassword" placeholder="Your Password"><br>
                 <input type="submit" value="Log In" class="valid">

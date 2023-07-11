@@ -43,6 +43,14 @@ class UserProfile extends CI_Model{
         $this->db->query($sql);
     }
 
+    public function authenticate($email, $pass){
+        $sql = "SELECT idUser from UserProfile where userEmail = '%s' and userPassword = '%s'";
+        $sql = sprintf($sql, $email, $pass);
+        $ans = $this->db->query($sql);
+
+        return $ans->row_array();
+    }
+
 }
 
 ?>
