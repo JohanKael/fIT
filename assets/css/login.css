@@ -1,24 +1,17 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin-left: 20%;
 }
 
 .contain{
-    width: 60%;
+    width: 80%;
     height: 500px;
     display: flex;
     box-shadow: 0 0 50px rgb(209, 209, 209);
     border-radius: 20px;
     margin-top: 5%;
-}
-
-.signin{
-    width: 60%;
-    height: 600px;
-    display: flex;
-    box-shadow: 0 0 50px rgb(209, 209, 209);
-    border-radius: 20px;
-    margin-top: 2%;
 }
 
 .imgcontainer{

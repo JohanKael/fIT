@@ -10,8 +10,10 @@ CREATE TABLE UserProfile(
    userWeight FLOAT NOT NULL,
    userGender VARCHAR(10) NOT NULL,
    userEmail VARCHAR(255) NOT NULL,
-   userPassword VARCHAR(255) NOT NULL
+   userPassword VARCHAR(255) NOT NULL,
+   idObjectif INT
 );
+ALTER TABLE UserProfile ADD FOREIGN KEY(idObjectif) REFERENCES Objectif(idObjectif);
 
 CREATE TABLE Objectif(
     idObjectif INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -63,3 +65,7 @@ CREATE TABLE MoneyCode(
     montantCode FLOAT,
     checkCode INT
 );
+
+insert into Objectif(descriObjectif) values('Perde du poids');
+insert into Objectif(descriObjectif) values('Vouloir l ICM ideale');
+insert into Objectif(descriObjectif) values('Gagner du poids');

@@ -6,12 +6,13 @@ class Login extends CI_Controller {
 	public function index(){
 		$this->load->view('login_view');
 	}	
-
-	public function afterLogged(){
-		$this->load->view('home_view');
-	}
 	
 	public function checkLogin(){
+		$this->load->model('Objectifs');
+
+		$this->load->library('session');
+		$idUser = $this->session->has_userdata('idUser');
+		$bool = $this->Objectifs->settedObjectif($idUser);
 		
         $email = $this->input->post('userEmail');
         $password = $this->input->post('userPassword');
@@ -27,7 +28,12 @@ class Login extends CI_Controller {
 			}else{
 				$this->load->library('session');
 				$this->session->set_userdata('idUser', $result);
-				redirect('index.php/Login/afterLogged');
+				if($bool == true){
+					redirect('index.php/Login/chooseObjectif');
+				}else{
+					redirect('index.php/Login/home');
+				}
+				
 			}
 		}
 		
@@ -54,10 +60,27 @@ class Login extends CI_Controller {
 
 			redirect(base_url());
 		}
-	
-		
-
 	}
+	
+	
+	public function chooseObjectif(){
+		$this->load->model('Objectifs');
+		$data = array();
+		$data['infoDescri'] = $this->Objectifs->getAllDescri();
+
+		$this->load->view('objectif_view', $data);
+	}
+
+	public function home(){
+		$this->load->view('home_view');
+		$this->load->library('session');
+		$idUser = $this->session->has_userdata('idUser');
+		$objectif = $this->input->post('objectif');
+
+		$this->load->model('Objectifs');
+		$this->Objectifs->setObjectif($idUser, $objectif);
+	}
+	
 
 }
 
