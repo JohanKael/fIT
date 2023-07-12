@@ -13,12 +13,11 @@ CREATE TABLE UserProfile(
    userPassword VARCHAR(255) NOT NULL,
    idObjectif INT
 );
-ALTER TABLE UserProfile ADD FOREIGN KEY(idObjectif) REFERENCES Objectif(idObjectif);
-
 CREATE TABLE Objectif(
     idObjectif INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     descriObjectif VARCHAR(40)
 );
+ALTER TABLE UserProfile ADD FOREIGN KEY(idObjectif) REFERENCES Objectif(idObjectif);
 
 CREATE TABLE Plat(
     idPlat INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
