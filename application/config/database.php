@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mysql-fitmaster.alwaysdata.net',
+	'hostname' => 'mysql:host=mysql-fitmaster.alwaysdata.net',
 	'username' => 'fitmaster_deploy',
 	'password' => 'etu001844',
 	'database' => 'fit',
