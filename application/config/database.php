@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => 'mysql:host=mysql-fitmaster.alwaysdata.net',
 	'username' => 'fitmaster_deploy',
 	'password' => 'etu001844',
-	'database' => 'fit',
+	'database' => 'fitmaster_deploy',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
