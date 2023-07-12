@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mysql:host=mysql-fitmaster.alwaysdata.net',
+	'hostname' => 'mysql:host=mysql-fitmaster.alwaysdata.net;dbname=fitmaster_deploy',
 	'username' => 'fitmaster_deploy',
 	'password' => 'etu001844',
-	'database' => 'fitmaster_deploy',
+	'database' => '',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
